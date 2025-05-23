@@ -6,7 +6,7 @@ on:
       - master
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -19,3 +19,6 @@ jobs:
           heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
           heroku_app_name: heroku-service-demo
           heroku_email: bcmalla@uce.edu.ec
+        env:
+          HD_FORCE_PUSH: true
+
